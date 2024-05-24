@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" onclick="jump();">
+<head>
+    <meta charset="UTF-8">
+    <title>šokliukas</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="game">
+        
+        <div id="character"></div>
+        <div id="rock"></div>
+        
+    </div>
+    
+    <script>
+    
+    let soklys = document.getElementById('character');
+        let akmuo = document.getElementById('rock');
+        
+        function jump(){
+            if(soklys.classList != 'animate'){
+               soklys.classList.add('animate');
+               }
+            setTimeout(function(){
+                soklys.classList.remove('animate');
+            },500);
+        };
+        
+        let pabaiga = setInterval(uzkliuvau, 10);
+    
+    function uzkliuvau(){
+        let soklysTop = parseInt(window.getComputedStyle(soklys).getPropertyValue('top'));
+        let akmuoLeft = parseInt(window.getComputedStyle(akmuo).getPropertyValue('left'));
+        
+        if(akmuoLeft<20 && akmuoLeft>0 && soklysTop>=130){
+            akmuo.style.animation = 'none';
+            akmuo.style.display = 'none';
+            alert('Žaidimas baigtas! Atnaujinkite puslapį, jeigu norite tęsti.');
+           
+           }
+    }
+    
+    
+    </script>
+    
+    
+    
+    
+    
+</body>
+</html>

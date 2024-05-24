@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Įjunk Šviesą</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    <h1>Uždek Šviesą!</h1>
+    
+    <button onclick="on();">Įjungti</button>
+    
+    <img src="tamsa.png" id="lempa" width="100">
+    
+    
+    <button onclick="off();">Išjungti</button>
+    
+    <script>
+    
+        function on(){
+            document.getElementById('lempa').src = 'šviesa.png';
+        }
+        function off(){
+            document.getElementById('lempa').src = 'tamsa.png';
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spėk</title>
+</head>
+<body>
+    
+    <script>
+        
+        function zaidimas(){
+        
+    let skaicius = Math.round(Math.random()*5);
+        let spek = '';
+        
+        
+           while(spek != skaicius){
+               spek = prompt('Parašyk nuo 0 iki 5:');
+        if(spek > skaicius){
+                alert('Tavo skaičius per didelis.');
+           }else if(spek < skaicius){
+                alert('Tavo skaičius per mažas.');
+           }else{
+                alert('Tu ATSPEJAI!');  
+           };
+           };
+        
+        };
+        
+        
+    </script>
+    
+</body>
+</html>
